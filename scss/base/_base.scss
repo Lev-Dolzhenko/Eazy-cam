@@ -59,3 +59,11 @@ a {
     font-weight: 700;
     color: $colorDark;
 }
+
+.pSecondaryColor {
+    line-height: 140%;
+    font-weight: 500;
+    font-size: 18px;
+    color: $colorSecondaryDark;
+    opacity: 0.7;
+}

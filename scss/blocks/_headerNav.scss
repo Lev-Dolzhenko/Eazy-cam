@@ -1,15 +1,19 @@
 .header {
-    max-height: 748px;
+    height: 748px;
     background-image: url(/content/header/background.jpg);
     padding-top: 16px;
 }
 
-.header__row {
-    // margin-bottom: 100px;
-}
+// .header__row {
+//     // margin-bottom: 100px;
+// }
 
 .header__row--phone {
     display: none;
+
+    img {
+        width: 23px;
+    }
 
     @include mediaPhone {
         display: flex;
