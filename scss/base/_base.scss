@@ -51,6 +51,16 @@ a {
     font-weight: 700;
     color: $colorWhite;
     line-height: 110%;
+
+    @include mediaTablet {
+        font-size: 28px;
+        line-height: 110%;
+    }
+
+    @include mediaPhone {
+        font-size: 24px;
+        line-height: 120%;
+    }
 }
 
 .h1Dark {
@@ -58,6 +68,14 @@ a {
     font-size: 48px;
     font-weight: 700;
     color: $colorDark;
+    
+    @include mediaTablet {
+        font-size: 28px;
+    }
+    
+    @include mediaPhone {
+        font-size: 24px;
+    }
 }
 
 .pSecondaryColor {

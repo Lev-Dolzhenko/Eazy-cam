@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* BASE */ /* Reset and base styles  */
 * {
   padding: 0px;
@@ -153,12 +154,34 @@ a {
   color: #fff;
   line-height: 110%;
 }
+@media screen and (max-width: 768px) {
+  .h1White {
+    font-size: 28px;
+    line-height: 110%;
+  }
+}
+@media screen and (max-width: 660px) {
+  .h1White {
+    font-size: 24px;
+    line-height: 120%;
+  }
+}
 
 .h1Dark {
   font-family: "Play", serif;
   font-size: 48px;
   font-weight: 700;
   color: #333;
+}
+@media screen and (max-width: 768px) {
+  .h1Dark {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .h1Dark {
+    font-size: 24px;
+  }
 }
 
 .pSecondaryColor {
@@ -515,6 +538,95 @@ a {
     margin-top: 20px;
   }
 }
+.tariff {
+  min-height: 733px;
+  background-image: url("/content/tariff/background.jpg");
+  padding: 120px 0;
+}
+
+.tariff__list {
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .tariff__list {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .tariff__list {
+    margin-top: 20px;
+  }
+}
+
+.tariff__item {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  opacity: 0.6;
+  padding: 50px 45px;
+  -webkit-transition: opacity 0.2s linear, -webkit-transform 0.2s linear;
+  transition: opacity 0.2s linear, -webkit-transform 0.2s linear;
+  transition: opacity 0.2s linear, transform 0.2s linear;
+  transition: opacity 0.2s linear, transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+.tariff__item h3 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  .tariff__item h3 {
+    font-size: 22px;
+    line-height: 110%;
+  }
+}
+@media screen and (max-width: 660px) {
+  .tariff__item h3 {
+    font-size: 18px;
+    line-height: 120%;
+    margin-bottom: 18px;
+  }
+}
+.tariff__item h1 {
+  position: relative;
+}
+.tariff__item h1::after {
+  content: "/ месяц";
+  position: absolute;
+  left: 133px;
+  top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 120%;
+}
+@media screen and (max-width: 768px) {
+  .tariff__item h1::after {
+    left: 75px;
+    top: 4px;
+  }
+}
+.tariff__item p {
+  margin-top: 21px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  line-height: 150%;
+}
+@media screen and (max-width: 660px) {
+  .tariff__item p {
+    margin-top: 22px;
+  }
+}
+.tariff__item:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  opacity: 1;
+  cursor: pointer;
+}
+
 .nav-icon-btn {
   --time: 0.1s;
   --width: 40px;
