@@ -1,12 +1,74 @@
 .header {
+    position: relative;
     height: 748px;
     background-image: url(/content/header/background.jpg);
     padding-top: 16px;
+
+    .header__row__menu {
+        position: absolute;
+        left: -242px;
+        top: 0;
+        width: 242px;
+        height: 690px;
+
+        z-index: 4;
+
+        background-color: $colorWhite;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+
+
+        &--active {
+            animation: showMenu 0.8s forwards;
+        }
+
+        &--hide {
+            animation: hideMenu 0.8s forwards;
+        }
+    }
+
+    .header__row__menu--close {
+        margin-left: auto;
+
+        img {
+            width: 13px;
+        }
+    }
+
+    .header__row__menu--nav {
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 110%;
+        color: $colorDark;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+    }
+
+    .header__row__menu--phone {
+        font-weight: 500;
+        line-height: 110%;
+        color: $colorAccent;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            width: 36px;
+        }
+    }
 }
 
-// .header__row {
-//     // margin-bottom: 100px;
-// }
+.header__row {}
 
 .header__row--phone {
     display: none;
@@ -73,7 +135,7 @@
 
     &:hover {
         background-color: $colorHover;
-        box-shadow: 0 0 20px  $colorHover;
+        box-shadow: 0 0 20px $colorHover;
     }
 
     @include mediaTablet {

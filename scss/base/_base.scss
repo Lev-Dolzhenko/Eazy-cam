@@ -19,7 +19,7 @@ a {
 }
 
 .none {
-    display: none;
+    display: none !important;
 }
 
 .button {
@@ -90,4 +90,8 @@ a {
     font-size: 18px;
     font-weight: 600;
     line-height: 130%;
+}
+
+.hideYScroll {
+    overflow-y: hidden;
 }

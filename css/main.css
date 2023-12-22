@@ -1,5 +1,38 @@
 @charset "UTF-8";
-/* BASE */ /* Reset and base styles  */
+/* BASE */
+@-webkit-keyframes showMenu {
+  from {
+    left: -242px;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes showMenu {
+  from {
+    left: -242px;
+  }
+  to {
+    left: 0;
+  }
+}
+@-webkit-keyframes hideMenu {
+  from {
+    left: 0;
+  }
+  to {
+    left: -242px;
+  }
+}
+@keyframes hideMenu {
+  from {
+    left: 0;
+  }
+  to {
+    left: -242px;
+  }
+}
+/* Reset and base styles  */
 * {
   padding: 0px;
   margin: 0px;
@@ -113,7 +146,7 @@ a {
 }
 
 .none {
-  display: none;
+  display: none !important;
 }
 
 .button {
@@ -198,12 +231,86 @@ a {
   line-height: 130%;
 }
 
+.hideYScroll {
+  overflow-y: hidden;
+}
+
 /* BASE */
 /* BLOCKS */
 .header {
+  position: relative;
   height: 748px;
   background-image: url(/content/header/background.jpg);
   padding-top: 16px;
+}
+.header .header__row__menu {
+  position: absolute;
+  left: -242px;
+  top: 0;
+  width: 242px;
+  height: 690px;
+  z-index: 4;
+  background-color: #fff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+}
+.header .header__row__menu--active {
+  -webkit-animation: showMenu 0.8s forwards;
+          animation: showMenu 0.8s forwards;
+}
+.header .header__row__menu--hide {
+  -webkit-animation: hideMenu 0.8s forwards;
+          animation: hideMenu 0.8s forwards;
+}
+.header .header__row__menu--close {
+  margin-left: auto;
+}
+.header .header__row__menu--close img {
+  width: 13px;
+}
+.header .header__row__menu--nav {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 110%;
+  color: #333;
+}
+.header .header__row__menu--nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+}
+.header .header__row__menu--phone {
+  font-weight: 500;
+  line-height: 110%;
+  color: #386DF4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header .header__row__menu--phone img {
+  width: 36px;
 }
 
 .header__row--phone {
