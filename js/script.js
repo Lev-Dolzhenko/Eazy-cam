@@ -18,4 +18,3 @@ closeMenu.addEventListener('click', function() {
 });
 
 /* SHOW/HIDE PHONE MENU */
-
